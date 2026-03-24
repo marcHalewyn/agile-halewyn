@@ -1,5 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
+
+/** Bestand in public/ — wordt op de site-root geserveerd */
+const cvPdfHref = '/CV_Marc_Halewyn_20260323.pdf';
 ---
 
 <Base
@@ -44,6 +47,9 @@ import Base from '../layouts/Base.astro';
           <a href="#contact" class="btn btn-primary">Neem contact op</a>
           <a href="#wat-ik-doe" class="btn btn-outline">Bekijk wat ik doe</a>
         </div>
+        <p class="hero-cv-note">
+          <a href={cvPdfHref} target="_blank" rel="noopener">CV downloaden (PDF)</a>
+        </p>
       </div>
     </div>
   </header>
@@ -317,6 +323,10 @@ import Base from '../layouts/Base.astro';
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
           <span>LinkedIn</span>
         </a>
+        <a href={cvPdfHref} target="_blank" rel="noopener" class="contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+          <span>CV (PDF)</span>
+        </a>
       </div>
     </div>
   </section>
@@ -324,7 +334,7 @@ import Base from '../layouts/Base.astro';
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2026 Agile Halewyn — KvK Utrecht</p>
+      <p>&copy; 2026 Agile Halewyn — KvK 90024559</p>
     </div>
   </footer>
 
@@ -501,6 +511,20 @@ import Base from '../layouts/Base.astro';
     display: flex;
     gap: var(--space-sm);
     flex-wrap: wrap;
+  }
+
+  .hero-cv-note {
+    margin-top: var(--space-sm);
+    font-size: 15px;
+  }
+  .hero-cv-note a {
+    color: var(--color-accent);
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .hero-cv-note a:hover {
+    color: var(--color-accent-light);
   }
 
   /* ───── BUTTONS ───── */
