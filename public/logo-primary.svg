@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 210" width="400" height="210">
+  <!--
+    Pyramid: peak at (200,8), base at y=185, half-width=80
+    At y=72: x = 200 ± 80*(72-8)/177 = 200 ± 28.9 → 171, 229
+    At y=148: x = 200 ± 80*(148-8)/177 = 200 ± 63.3 → 137, 263
+    At y=185: x = 200 ± 80 → 120, 280
+  -->
+  
+  <!-- Top pyramid peak -->
+  <polygon points="200,8 229,72 171,72" fill="#233565"/>
+  
+  <!-- Wordmark -->
+  <text x="200" y="112" text-anchor="middle" font-family="'Alegreya Sans', 'Arial', sans-serif" font-weight="600" font-size="32" letter-spacing="2">
+    <tspan fill="#233565">AGILE</tspan><tspan fill="#3d9970">HALEWYN</tspan>
+  </text>
+  <text x="348" y="98" font-family="'Alegreya Sans', 'Arial', sans-serif" font-weight="500" font-size="12" fill="#233565">™</text>
+  
+  <!-- Tagline -->
+  <text x="200" y="132" text-anchor="middle" font-family="'Didact Gothic', 'Arial', sans-serif" font-weight="400" font-size="11" fill="#233565" letter-spacing="0.5">
+    Your partner for agile testing success
+  </text>
+  
+  <!-- Bottom pyramid base - same slope -->
+  <polygon points="137,148 263,148 280,185 120,185" fill="#233565"/>
+</svg>

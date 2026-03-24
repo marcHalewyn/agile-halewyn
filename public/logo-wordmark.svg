@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 60" width="400" height="60">
+  <!-- Wordmark only -->
+  <text x="200" y="40" text-anchor="middle" font-family="'Alegreya Sans', 'Arial', sans-serif" font-weight="600" font-size="36" letter-spacing="2">
+    <tspan fill="#233565">AGILE </tspan><tspan fill="#3d9970">HALEWYN</tspan><tspan fill="#233565" font-size="16" baseline-shift="super">™</tspan>
+  </text>
+</svg>

@@ -1,8 +1,5 @@
 ---
 import Base from '../layouts/Base.astro';
-
-/** Bestand in public/ — wordt op de site-root geserveerd */
-const cvPdfHref = '/CV_Marc_Halewyn_20260323.pdf';
 ---
 
 <Base
@@ -14,8 +11,12 @@ const cvPdfHref = '/CV_Marc_Halewyn_20260323.pdf';
   <nav class="nav">
     <div class="nav-inner">
       <a href="#" class="nav-logo">
-        <span class="nav-logo-mark">AH</span>
-        <span class="nav-logo-text">Agile Halewyn</span>
+        <svg class="nav-logo-svg" viewBox="0 0 36 40" width="32" height="36">
+          <polygon points="18,1 24,14 12,14" fill="#233565"/>
+          <text x="18" y="25" text-anchor="middle" font-family="'Alegreya Sans','Arial',sans-serif" font-weight="600" font-size="10" fill="#233565">AH</text>
+          <polygon points="6,29 30,29 34,37 2,37" fill="#233565"/>
+        </svg>
+        <span class="nav-logo-text"><span style="color:#233565">AGILE</span><span style="color:#3d9970">HALEWYN</span></span>
       </a>
       <div class="nav-links">
         <a href="#wat-ik-doe">Wat ik doe</a>
@@ -47,9 +48,6 @@ const cvPdfHref = '/CV_Marc_Halewyn_20260323.pdf';
           <a href="#contact" class="btn btn-primary">Neem contact op</a>
           <a href="#wat-ik-doe" class="btn btn-outline">Bekijk wat ik doe</a>
         </div>
-        <p class="hero-cv-note">
-          <a href={cvPdfHref} target="_blank" rel="noopener">CV downloaden (PDF)</a>
-        </p>
       </div>
     </div>
   </header>
@@ -268,15 +266,16 @@ const cvPdfHref = '/CV_Marc_Halewyn_20260323.pdf';
           en dat bleek een schot in de roos.
         </p>
         <p>
-          Wat mij drijft is kwaliteit, ik wil dat software werkt zoals bedoeld, dat risico's zichtbaar zijn vóórdat ze
+          Wat mij drijft is kwaliteit, niet als abstract begrip, maar als concreet resultaat.
+          Ik wil dat software werkt zoals bedoeld, dat risico's zichtbaar zijn vóórdat ze
           problemen worden, en dat teams zelfstandig kunnen bouwen aan kwaliteit. Dat bereik
           ik door zelf mee te doen: frameworks opzetten, testplannen schrijven, meedenken in
           sprints, en kennis overdragen.
         </p>
         <p>
-          Ik werk het liefst in sectoren met maatschappelijke impact: overheid, zorg, energie —
-          waar de kwaliteit van software er echt toe doet. Complexe technische omgevingen met
-          API-integraties en meerdere systemen spreken mij aan.
+          Ik werk het liefst in sectoren met maatschappelijke impact, waar de kwaliteit 
+          van software er echt toe doet. Complexe technische omgevingen met
+          API-integraties, compliance-eisen en meerdere systemen spreken mij aan. 
         </p>
         <div class="about-details">
           <div class="detail">
@@ -320,10 +319,6 @@ const cvPdfHref = '/CV_Marc_Halewyn_20260323.pdf';
         <a href="https://linkedin.com/in/marchalewyn" target="_blank" rel="noopener" class="contact-item">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
           <span>LinkedIn</span>
-        </a>
-        <a href={cvPdfHref} target="_blank" rel="noopener" class="contact-item">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
-          <span>CV (PDF)</span>
         </a>
       </div>
     </div>
@@ -467,7 +462,7 @@ const cvPdfHref = '/CV_Marc_Halewyn_20260323.pdf';
   /* ───── HERO ───── */
   .hero {
     padding: calc(64px + var(--space-2xl)) var(--space-md) var(--space-2xl);
-    background: linear-gradient(135deg, #f7fafc 0%, #ebf4ff 100%);
+    background: linear-gradient(135deg, #f5faf8 0%, #edf7f2 100%);
   }
   .hero-inner {
     max-width: var(--max-width);
@@ -509,20 +504,6 @@ const cvPdfHref = '/CV_Marc_Halewyn_20260323.pdf';
     display: flex;
     gap: var(--space-sm);
     flex-wrap: wrap;
-  }
-
-  .hero-cv-note {
-    margin-top: var(--space-sm);
-    font-size: 15px;
-  }
-  .hero-cv-note a {
-    color: var(--color-accent);
-    font-weight: 500;
-    text-decoration: underline;
-    text-underline-offset: 3px;
-  }
-  .hero-cv-note a:hover {
-    color: var(--color-accent-light);
   }
 
   /* ───── BUTTONS ───── */
@@ -718,8 +699,8 @@ const cvPdfHref = '/CV_Marc_Halewyn_20260323.pdf';
     border-radius: 6px;
   }
   .tag-list-sectors span {
-    background: #f0fff4;
-    color: #276749;
+    background: #e8f5ee;
+    color: #233565;
   }
 
   /* ───── ABOUT ───── */
